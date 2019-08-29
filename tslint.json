@@ -9,6 +9,7 @@
     ]
   },
   "rules": {
+    "disable-next-line": "no-console",
     "indent": [true, "spaces", 2],
     "interface-name": false,
     "no-consecutive-blank-lines": false,
