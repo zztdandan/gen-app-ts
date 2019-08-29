@@ -2,6 +2,21 @@
   "name": "gen-app-ts",
   "version": "0.1.0",
   "private": true,
+  "jest": {
+    "rootDir": "tests",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -9,12 +24,17 @@
     "electron:build": "vue-cli-service electron:build",
     "electron:serve": "vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps"
+    "postuninstall": "electron-builder install-app-deps",
+    "test": "jest --verbose"
   },
   "main": "background.js",
   "dependencies": {
+    "axios": "^0.19.0",
     "core-js": "^2.6.5",
     "element-ui": "^2.11.1",
+    "js-cookie": "^2.2.1",
+    "qs": "^6.8.0",
+    "ts-toolbelt": "^3.8.63",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",
@@ -22,6 +42,8 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@types/js-cookie": "^2.2.2",
+    "@types/qs": "^6.5.3",
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-typescript": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
