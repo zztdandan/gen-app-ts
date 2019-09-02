@@ -1,19 +1,19 @@
+import { AxiosWrapBase } from './AxiosWrapBase';
 import { Loading, MessageBox, Notification, Message } from 'element-ui';
-import { O } from 'ts-toolbelt';
-import { type } from 'os';
+
 import { IAxoisWrapMethods } from './IAxoisWrapMethods';
-import { axiosMethods } from './AxiosWrap';
-import AxiosWrap from './AxiosWrap';
+
 import { AxiosResponse } from 'axios';
+
 interface IOtherOption {
     element: boolean;
     loading: boolean;
     fullscreen: boolean;
     successMsg?: string;
 }
-class Axios4Ele extends AxiosWrap {
+export class Axios4Ele extends AxiosWrapBase {
     public static initAxios(): IAxoisWrapMethods {
-        const wrap = new this();
+        const wrap = new Axios4Ele();
         return {
             get: (url: string, data: object) => wrap.CommenAjax('get', 'application/x-www-form-urlencoded', url, data),
             post: (url: string, data: object) =>

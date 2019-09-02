@@ -1,5 +1,5 @@
 import axios from 'axios';
-import AxiosWrap,{axiosMethods} from './AxiosWrap';
+import { axiosMethods } from './AxiosWrapBase';
 
 class VueWrapInstall {
     public static install(Vue: any, options: object = {}): void {
