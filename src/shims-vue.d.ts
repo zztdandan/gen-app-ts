@@ -1,7 +1,6 @@
 import { IAxoisWrapMethods } from '@/utils/axioswrap/IAxoisWrapMethods';
-
+import Vue from 'vue';
 declare module '*.vue' {
-    import Vue from 'vue';
     export default Vue;
 }
 
@@ -16,7 +15,7 @@ declare module '*.gif' {
 //如果需要挂载一些东西在vue的$上面需要在这里注册
 declare module 'vue/types/vue' {
     interface Vue {
-      // $axios:IAxoisWrapMethods
+        // $axios:IAxoisWrapMethods
     }
 }
 // TODO: remove this part after vue-count-to has its typescript file
