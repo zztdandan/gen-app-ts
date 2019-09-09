@@ -3,6 +3,8 @@ declare module '*.vue' {
     export default Vue;
 }
 
+//如果需要挂载一些东西在vue的$上面需要在这里注册
+
 declare module 'element-ui/lib/locale/lang/*' {
     export const elementLocale: any;
 }
@@ -11,13 +13,6 @@ declare module '*.gif' {
     export const gif: any;
 }
 
-//如果需要挂载一些东西在vue的$上面需要在这里注册
-declare module 'vue/types/vue' {
-    import { IAxoisWrapMethods } from '@/utils/axioswrap/IAxoisWrapMethods';
-    interface Vue {
-        $axios: IAxoisWrapMethods;
-    }
-}
 // TODO: remove this part after vue-count-to has its typescript file
 declare module 'vue-count-to';
 

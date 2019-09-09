@@ -28,6 +28,9 @@ export function list2Tree(list: any[], listAttr: ListAttribute) {
     });
     return lootNode;
 }
+/**
+ * 注意，该类建议使用new的方式定义，而不是直接定义，否则会缺失大多数属性
+ */
 export class ListAttribute {
     public listIdStr: string;
     public listLabelStr: string;

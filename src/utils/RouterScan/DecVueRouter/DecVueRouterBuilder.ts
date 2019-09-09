@@ -1,5 +1,4 @@
 import { IRouterBuilder } from '../RouterFactory/IRouterBuilder';
-
 import { VuePropsDefine } from '../Common/VuePropsDefine';
 import RouterScan from './RouterScan';
 import { list2Tree, ListAttribute } from '@/utils/List2Tree/List2Tree';

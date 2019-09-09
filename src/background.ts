@@ -1,4 +1,3 @@
-
 'use strict';
 // tslint:disable-next-line:import-spacing
 import  path from 'path';

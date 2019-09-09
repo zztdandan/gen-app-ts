@@ -1,11 +1,11 @@
 import { RouteConfig } from 'vue-router';
 import { IRouter } from './IRouter';
-import RouteDefine from './RouteDefine';
+import CommonRouteDefine from './RouteDefine';
 import { routeMetaName } from './constDefine';
 /**
  * 除了自定义irouter之外，多实现了vue的router规则
  */
-export class VuePropsDefine extends RouteDefine implements IRouter, RouteConfig {
+export class VuePropsDefine extends CommonRouteDefine implements IRouter, RouteConfig {
     public path: string = '';
     public component?: any | null;
     public children?: RouteConfig[];

@@ -7,6 +7,7 @@ export interface IRouter {
     label?: string;
     parentRoute?: string | null;
     manuallyUrl?: string | null;
+    redirect?: string ;
     meta?: object;
     icon?: string;
 }

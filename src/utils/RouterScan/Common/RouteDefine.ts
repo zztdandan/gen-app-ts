@@ -3,7 +3,7 @@ import { IRouter } from './IRouter';
  * 定义一个静态方法来描述Router的装饰器，包括足够的信息使得该类能够注册到router里面
  * 非装饰器方法也可以通过这个类获得所需schema的默认值
  */
-class RouteDefine implements IRouter {
+class CommonRouteDefine implements IRouter {
     /**
      * 该类是否是接口，可以自行设定为不是，则可以屏蔽对该接口的生成
      */
@@ -28,6 +28,7 @@ class RouteDefine implements IRouter {
     public meta?: object = {};
 
     public parentRoute?: string | null = null;
+    public redirect?: string;
     /**
      *  初始化这个装饰器，然后可以使用自带的函数变化为vue的router或其他的router
      * @param setting 一个规定类型的初始化文本
@@ -40,9 +41,10 @@ class RouteDefine implements IRouter {
             this.name = setting.name;
             this.meta = setting.meta ? setting.meta : {};
             this.parentRoute = setting.parentRoute ? setting.parentRoute : null;
+            this.redirect = setting.redirect ? setting.redirect : undefined;
         } else {
             this.isRouter = false;
         }
     }
 }
-export default RouteDefine;
+export default CommonRouteDefine;
