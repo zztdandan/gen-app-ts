@@ -4,6 +4,7 @@ import { Loading, MessageBox, Notification, Message } from 'element-ui';
 import { IAxoisWrapMethods } from './IAxoisWrapMethods';
 
 import { AxiosResponse } from 'axios';
+import { Route } from '../RouterScan/DecVueROuter/RouteDecorator';
 
 interface IOtherOption {
     element: boolean;
@@ -41,7 +42,7 @@ export class Axios4Ele extends AxiosWrapBase {
     }
 
     /**
-     * 公用ajax方法
+     * 公用ajax方法。在4Ele中，相关回馈增加了element的内容
      * @param method get\post
      * @param dataType 传输的数据类型
      * @param url 地址
